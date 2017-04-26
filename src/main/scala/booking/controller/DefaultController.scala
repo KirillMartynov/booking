@@ -40,7 +40,7 @@ object DefaultController {
   }
 
   @GetMapping(value = Array("movies/{imdbId}/{screenId}"))
-  def getMovieInformation(@PathVariable imdbId: String, @PathVariable screenId: String): MovieInformationResponse = {
+  def getMovieInformation(@PathVariable(name = "imdbId") imdbId: String, @PathVariable(name = "screenId") screenId: String): MovieInformationResponse = {
     val details = reservationService.getReservationDetails(MovieDescriptor(imdbId, screenId))
     val title = movieInformationService.findTitle(imdbId).getOrElse("Cannot find movie name")
 

@@ -33,4 +33,4 @@ sbt run
 "imdbId":"tt0111161",
 "screenId":"screen3"} 
 or
-> GET http://localhost:8080/tt0111161/screen3 
+> GET http://localhost:8080/movies/tt0111161/screen3 
