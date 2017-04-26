@@ -14,23 +14,23 @@ sbt run
 
 # Urls
 - Register a movie
-| POST http://localhost:8080/movies                                    |
-| BODY {
+> POST http://localhost:8080/movies                 
+> BODY {
 "imdbId":"tt0111161",
 "screenId":"screen3",
 "availableSeats":10
-} |
+}
 
 - Reserve a seat at the movie
-| POST http://localhost:8080/movies/seat/reserve   |
-| BODY {
+> POST http://localhost:8080/movies/seat/reserve   
+> BODY {
 "imdbId":"tt0111161",
-"screenId":"screen3"} |
+"screenId":"screen3"} 
 
 - Retrieve information about the movie
-| POST http://localhost:8080/movies/information    |
-| BODY {
+> POST http://localhost:8080/movies/information    
+> BODY {
 "imdbId":"tt0111161",
-"screenId":"screen3"} |
+"screenId":"screen3"} 
 or
-| GET http://localhost:8080/tt0111161/screen3 |
+> GET http://localhost:8080/tt0111161/screen3 
